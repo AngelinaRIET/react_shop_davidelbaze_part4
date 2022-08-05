@@ -1,0 +1,107 @@
+html,
+body,
+div#root {
+  height: 100%;
+}
+.mainBloc {
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.productList {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  flex: 1;
+  padding: 2rem;
+}
+.linkCard {
+  position: relative;
+}
+.linkCard {
+  text-decoration: none;
+}
+.card {
+  width: 18rem;
+  margin: 2rem;
+}
+.card.showOverlay::after {
+  content: "";
+  background-color: transparent;
+  transition: background-color 0.2s ease-in-out;
+}
+.card.showOverlay:hover::after {
+  content: "Voir le produit";
+  background-color: #0000004e;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card.added:hover::after {
+  content: "Ajouté au panier!";
+}
+
+card img {
+  object-fit: cover;
+}
+p.price {
+  font-weight: bold;
+  font-size: 1.2rem;
+  align-self: flex-end;
+}
+.bottom-bloc {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar,
+footer {
+  height: 4rem;
+  min-height: 4rem;
+  background-color: #a9d1c6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar a {
+  font-size: 1.4rem;
+  background-color: #dbdbdb;
+  padding: 0.4rem 1rem 0.4rem 1rem;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.navbar a:visited {
+  color: black;
+}
+.navbar a.active {
+  color: #0f757d;
+  font-weight: bold;
+}
+
+button.addToBasket {
+  z-index: 2;
+  cursor: pointer;
+  background-color: #0f758c;
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  color: white;
+  text-decoration: none;
+}
+div.productSheet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
